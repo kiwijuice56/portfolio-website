@@ -18,7 +18,7 @@ uniform float shimmer_speed = 0.1;
 
 const vec3 col_a = vec3(246.0/255.0, 233.0/255.0, 212.0/255.0);
 const vec3 col_b = vec3(216.0/255.0, 217.0/255.0, 206.0/255.0);
-const vec3 col_c = vec3(170.0/255.0, 181.0/255.0, 178.0/255.0);
+const vec3 col_c = vec3(190.0/255.0, 198.0/255.0, 196.0/255.0);
 
 // Coloration: This part is not relevant to the mandelbrot calculation, so you can
 // modify it for different palettes. Most palettes use the iteration count `iter` to match
@@ -102,4 +102,6 @@ void fragment() {
 			COLOR.rgb += mandelbrot(UV - uv_size * vec2(i, j)) / 9.0;
 		}
 	}
+	float x = max(0.0, 1.0 - TIME);
+	COLOR.rgb = col_a * x + COLOR.rgb * (1.0 - x);
 }"

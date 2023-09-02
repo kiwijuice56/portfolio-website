@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Eric Alfaro"
-run/main_scene="res://main/FractalNavigation.tscn"
+run/main_scene="res://main/Main.tscn"
 boot_splash/show_image=false
 config/icon="res://icon.png"
 

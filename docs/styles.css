@@ -1,0 +1,133 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: "Ubuntu";
+	font-size: 18px;
+	background-color: #D8D9CE;
+	height: 100vh;
+	color: #606261;
+}
+
+#canvasHolder {
+	position: fixed;
+	z-index: -1;
+}
+
+#content {
+	height: 100%;
+}
+
+.nameTitle {
+	font-size: 96px;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	text-align: left;
+	color: #5F514F;
+}
+
+.subTitle {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+#frontSplash {
+	padding: 4em;
+	margin: auto;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.smallContainer {
+	padding-left: 4em;
+	padding-right: 4em;
+}
+
+#social a {
+	display: inline-block;
+	color: #5F514F;
+}
+
+a:link { 
+	text-decoration: none;
+}
+
+#social a:link, a:visited { 
+	color: #5F514F;
+}
+
+#social {
+	padding-top: 2em;
+	margin: auto;
+}
+
+#social img {
+	width: 2em;
+	padding-right: 0.5em;
+}
+
+.projectBlock {
+	overflow: hidden;
+	display: flex;
+	padding-left: 6em;
+	padding-right: 6em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+.projectTitle {
+	font-size: 48px;
+}
+
+.projectDescription {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.thumbnail {
+	width: 100%;
+	border-radius: 1em;
+}
+
+.projectNameTag {
+	max-width: 45%;
+	margin-right: 2em;
+}
+
+.projectTag {
+	font-size: 16px;
+}
+
+.projectTools {
+	list-style-type: none;
+	margin-bottom: 1em;
+}
+
+.projectTools li {
+	display: inline-block;
+	background: #606261;
+	color: #D8D9CE;
+	font-size: 16px;
+	border-radius: 0.5em;
+	padding: 0.25em;
+}
+
+@media(max-width: 920px) {
+	.projectNameTag {
+		max-width: 100%;
+	}
+		
+	.projectBlock {
+		max-width: 100%;
+		display: inline-block;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
