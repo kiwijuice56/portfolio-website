@@ -11,7 +11,7 @@ uniform float width = 1000;
 uniform float height = 800;
 uniform float angle = 0.0;
 
-uniform highp vec2 mouse_pos;
+uniform highp vec2 mouse_pos = vec2(0.0, 0.0);
 
 // How fast the palette is cycled through, proportional to the change in `TIME`
 uniform float shimmer_speed = 0.1;
@@ -30,7 +30,7 @@ vec3 color_cell(float mu, vec2 uv) {
 	
 	// Keep ratio in range [0, 1.0] since we are adding a large constant, TIME
 	shimmer_mu -= floor(shimmer_mu);
-	float scaled_shimmer = shimmer_mu * 4.0;
+	float scaled_shimmer = shimmer_mu * 2.0;
 	scaled_shimmer -= floor(scaled_shimmer);
 	float cyclic_scaled_mu = scaled_shimmer;
 	
@@ -102,6 +102,6 @@ void fragment() {
 			COLOR.rgb += mandelbrot(UV - uv_size * vec2(i, j)) / 9.0;
 		}
 	}
-	float x = max(0.0, 1.0 - TIME);
+	float x = max(0.0, 2.0 - TIME) / 2.0;
 	COLOR.rgb = col_a * x + COLOR.rgb * (1.0 - x);
 }"

@@ -51,62 +51,16 @@ func set_zoom(val: float) -> void:
 
 func _ready() -> void:
 	OS.set_window_maximized(true)
-	offset_min = Vector2(-2.5, -2)
-	offset_max = Vector2(1.5, 2)
+	offset_min = Vector2(-2, -2)
+	offset_max = Vector2(2, 2)
 	update_window()
+	
+	$Tween.connect("tween_all_completed", self, "_on_step")
+	_on_step() 
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion and not mouse_lock:
-		var pos: Vector2 = event.position / get_viewport().size
-		material.set_shader_param("mouse_pos", (pos_max - pos_min) * pos + pos_min)
-	
-	# Mobile zooming
-	# https://kidscancode.org/godot_recipes/3.x/2d/touchscreen_camera/
-	if event is InputEventScreenTouch:
-		if event.pressed:
-			events[event.index] = event
-		else:
-			events.erase(event.index)
-	if event is InputEventScreenDrag:
-		events[event.index] = event
-		if events.size() == 2:
-			var drag_distance = events[0].position.distance_to(events[1].position)
-			if abs(drag_distance - last_drag_distance) > zoom_sensitivity:
-				zoom_vel = 1 + zoom_sensitivity if drag_distance < last_drag_distance else 1 - zoom_sensitivity
-				last_drag_distance = drag_distance
-			was_dragging = true
-	
-	# PC zooming
-	if event is InputEventMouseButton:
-		if Input.is_mouse_button_pressed(BUTTON_WHEEL_UP):
-			zoom_vel = 1 - zoom_sensitivity
-		elif Input.is_mouse_button_pressed(BUTTON_WHEEL_DOWN):
-			zoom_vel = 1 + zoom_sensitivity
-	
-	# Panning
-	if len(events) < 2 and not was_dragging and event is InputEventMouseMotion and Input.is_mouse_button_pressed(BUTTON_LEFT):
-		var move_vector: Vector2 = event.relative
-		move_vector.x *= get_aspect_ratio()
-		offset_max -= zoom * move_vector * drag_speed
-		offset_min -= zoom * move_vector * drag_speed
-	
-	if len(events) == 0:
-		was_dragging = false
-
-func _process(delta: float) -> void:
-	zoom_vel = lerp(zoom_vel, 1.0, 0.25)
-	self.zoom *= zoom_vel
-	
-	var kb_vector: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	var kb_angle: float = Input.get_action_strength("rotate_left") - Input.get_action_strength("rotate_right")
-	kb_vector.x *= get_aspect_ratio() 
-	
-	offset_max += zoom * kb_vector * move_speed * delta
-	offset_min += zoom * kb_vector * move_speed * delta
-	
-	material.set_shader_param("angle", material.get_shader_param("angle") + kb_angle * delta * rotate_speed)
-	
-	update_window()
+func _on_step() -> void:
+	$Tween.interpolate_property(material, "shader_param/mouse_pos", null, Vector2(randf() * 2 - 1, randf() * 2 - 1), 10.0, Tween.TRANS_QUAD,Tween.EASE_IN_OUT)
+	$Tween.start()
 
 func update_window() -> void:
 	var aspect_ratio: float = get_aspect_ratio()

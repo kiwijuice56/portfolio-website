@@ -1,7 +1,28 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
+[ext_resource path="res://ubuntu.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://main/FractalNavigation.tscn" type="PackedScene" id=2]
+[ext_resource path="res://main/disable_button.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
 
 [node name="Main" type="Node"]
 
 [node name="FractalNavigation" parent="." instance=ExtResource( 2 )]
+
+[node name="DisableButton" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -25.0
+margin_right = 115.0
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0.615686, 0.658824, 0.647059, 1 )
+custom_colors/font_color_focus = Color( 0.615686, 0.658824, 0.647059, 1 )
+custom_colors/font_color = Color( 0.615686, 0.658824, 0.647059, 1 )
+custom_colors/font_color_hover = Color( 0.615686, 0.658824, 0.647059, 1 )
+custom_colors/font_color_pressed = Color( 0.615686, 0.658824, 0.647059, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "disable background"
+flat = true
+script = ExtResource( 3 )

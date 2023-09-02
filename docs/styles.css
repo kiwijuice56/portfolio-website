@@ -3,11 +3,16 @@
 	margin: 0;
 }
 
+html, body {
+   
+}
+
 body {
 	font-family: "Ubuntu";
 	font-size: 1em;
 	background-color: #D8D9CE;
 	height: 100vh;
+	width: 100%;
 	color: #606261;
 	
 	opacity: 0;
@@ -80,8 +85,16 @@ a:link {
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
-	padding: 2em;
+	padding-top: 1.8em;
+	padding-bottom: 1.8em;
+	
 	width: 100%;
+}
+
+.sectionTitle {
+	font-size: 2.5em;
+	text-align: center;
+	padding-top: 1.5em;
 }
 
 .projectTitle {
@@ -96,7 +109,7 @@ a:link {
 }
 
 .thumbnail {
-	width: 22em;
+	width: 20em;
 	border-radius: 1em;
 }
 
@@ -123,6 +136,11 @@ a:link {
 	padding: 0.25em;
 }
 
+footer p {
+	text-align: center;
+	padding: 3em 0em 2em 0em;
+}
+
 @media(max-width: 920px) {
 	.projectNameTag {
 		width: 100%;
@@ -133,5 +151,8 @@ a:link {
 		display: inline-block;
 		padding-left: 0;
 		padding-right: 0;
+	}
+	.thumbnail {
+		width: 100%;
 	}
 }
