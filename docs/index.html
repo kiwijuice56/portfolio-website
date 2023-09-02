@@ -4,14 +4,11 @@
         <title>Eric Alfaro</title>
         <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 		<link rel="stylesheet" href="styles.css">
     </head>
-	
-    <body>
-		<div id="canvasHolder">
-			<canvas id="canvas"></canvas>
-		</div>
+    <body onload="document.body.style.opacity='1'">
+		<div id="canvasHolder"><canvas id="canvas"></canvas></div>
 		
 		<div id="content">
 			<div class="container">
@@ -23,24 +20,9 @@
 						<a target="_blank" href="mailto:alfaroeric127@gmail.com"><img src="email.png"/></a>
 						<a target="_blank" href="https://github.com/kiwijuice56"><img src="github.png"/></a>
 						<a target="_blank" href="https://kiwijuice56.itch.io/"><img src="itchio.png"/></a>
+						<a target="_blank" href="https://www.youtube.com/channel/UC3zEYHyy2tWcg71AzlD-A1g"><img src="youtube.png"/></a>
 						<a target="_blank" href="https://www.linkedin.com/in/ericalfaro127/"><img src="linkedin.png"/></a>
 					</div>
-				</div>
-				
-			</div>
-			
-			<div class="smallContainer">
-				<div class="projectBlock">
-					<div class="projectNameTag">
-						<a class="projectTitle subTitle" href="https://play.google.com/store/apps/details?id=org.godotengine.sandslide&hl=en_US&gl=US&pli=1">Sand Slide</a>
-						<p class="projectDescription">A dynamic, physics-based, sandbox game with 70+ elements and a custom element editor. </p>
-						<ul class="projectTools">
-							<li><p>Godot 4</p></li>
-							<li><p>C++</p></li>
-							<li><p>Android</p></li>
-						</ul>
-					</div>
-					<img class="thumbnail" src="sandslide.png"/>
 				</div>
 			</div>
 			
@@ -59,11 +41,68 @@
 				</div>
 			</div>
 			
+			<div class="smallContainer">
+				<div class="projectBlock">
+					<div class="projectNameTag">
+						<a class="projectTitle subTitle" href="https://kiwijuice56.itch.io/night-shuriken">Night Shuriken</a>
+						<p class="projectTag">#1 in Texas Game Jam 2022</p>
+						<p class="projectDescription">A stylized 3D shooter that utilizes negative space to create a horrifying challenge. </p>
+						<ul class="projectTools">
+							<li><p>Godot 3</p></li>
+							<li><p>HTML5</p></li>
+						</ul>
+					</div>
+					<img class="thumbnail" src="nightshuriken.png"/>
+				</div>
+			</div>
+			
+			<div class="smallContainer">
+				<div class="projectBlock">
+					<div class="projectNameTag">
+						<a class="projectTitle subTitle" href="https://play.google.com/store/apps/details?id=org.godotengine.sandslide&hl=en_US&gl=US&pli=1">Sand Slide</a>
+						<p class="projectDescription">A dynamic and physics-based sandbox with 70+ elements and a custom element editor. </p>
+						<ul class="projectTools">
+							<li><p>Godot 4</p></li>
+							<li><p>C++</p></li>
+							<li><p>Android</p></li>
+						</ul>
+					</div>
+					<img class="thumbnail" src="sandslide.png"/>
+				</div>
+			</div>
+			
+			<div class="smallContainer">
+				<div class="projectBlock">
+					<div class="projectNameTag">
+						<a class="projectTitle subTitle" href="https://github.com/kiwijuice56/evolution-simulation">Evolution Simulation</a>
+						<p class="projectDescription">An interactive program that simulates emergence and natural selection in biological systems. </p>
+						<ul class="projectTools">
+							<li><p>Java</p></li>
+						</ul>
+					</div>
+					<img class="thumbnail" src="evolutionsimulation.png"/>
+				</div>
+			</div>
+			
+			<div class="smallContainer">
+				<div class="projectBlock">
+					<div class="projectNameTag">
+						<a class="projectTitle subTitle" href="https://kiwijuice56.github.io/fractal-fish/web-fractals.html">Fractal Fish<a>
+						<p class="projectDescription">A website for exploring both 2D and 3D fractals in a web browser.</p>
+						<ul class="projectTools">
+							<li><p>Godot 3</p></li>
+							<li><p>GLSL</p></li>
+							<li><p>HTML5</p></li>
+						</ul>
+					</div>
+					<img class="thumbnail" src="fractalfish.png"/>
+				</div>
+			</div>
 		</div>
 		
         <script src="index.js"></script>
         <script>
-            var engine = new Engine({"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":310160,"index.wasm":13793958},"focusCanvas":false,"gdnativeLibs":[]});
+            var engine = new Engine({"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":985808,"index.wasm":13793958},"focusCanvas":false,"gdnativeLibs":[]});
             engine.startGame();
         </script>
     </body>
