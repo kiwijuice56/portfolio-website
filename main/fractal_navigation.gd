@@ -51,6 +51,8 @@ func set_zoom(val: float) -> void:
 
 func _ready() -> void:
 	OS.set_window_maximized(true)
+	randomize()
+	
 	offset_min = Vector2(-2, -2)
 	offset_max = Vector2(2, 2)
 	update_window()
