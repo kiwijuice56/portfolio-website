@@ -9,7 +9,6 @@ uniform highp float y_min = -2; uniform highp float y_max = 2;
 
 uniform float width = 1000;
 uniform float height = 800;
-uniform float angle = 0.0;
 
 uniform highp vec2 mouse_pos = vec2(0.0, 0.0);
 
@@ -48,8 +47,6 @@ vec3 mandelbrot(vec2 uv) {
 	highp float y = y_min + uv.y * (y_max - y_min);
 	
 	float xtemp = x;
-	x = x * cos(angle) - y * sin(angle);
-	y = y * cos(angle) + xtemp * sin(angle);
 	
 	highp float x0 = x;
 	highp float y0 = y;
@@ -95,13 +92,8 @@ vec3 mandelbrot(vec2 uv) {
 }
 
 void fragment() {
-	COLOR.rgb = vec3(0.0);
-	vec2 uv_size = vec2(1.0 / width, 1.0 / height) / 4.0;
-	for (float i = -1.0; i <= 1.0; i++) {
-		for (float j = -1.0; j <= 1.0; j++) {
-			COLOR.rgb += mandelbrot(UV - uv_size * vec2(i, j)) / 9.0;
-		}
-	}
-	float x = max(0.0, 2.0 - TIME) / 2.0;
+	COLOR.rgb = mandelbrot(UV);
+	float x = max(0.0, 3.0 - TIME) / 3.0;
 	COLOR.rgb = col_a * x + COLOR.rgb * (1.0 - x);
+	
 }"

@@ -61,7 +61,7 @@ func _ready() -> void:
 	_on_step() 
 
 func _on_step() -> void:
-	$Tween.interpolate_property(material, "shader_param/mouse_pos", null, Vector2(randf() * 2 - 1, randf() * 2 - 1), 10.0, Tween.TRANS_QUAD,Tween.EASE_IN_OUT)
+	$Tween.interpolate_property(material, "shader_param/mouse_pos", null, Vector2(randf() * 2 - 1, randf() * 2 - 1), 15.0, Tween.TRANS_QUAD,Tween.EASE_IN_OUT)
 	$Tween.start()
 
 func update_window() -> void:
