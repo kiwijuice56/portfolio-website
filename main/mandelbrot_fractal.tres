@@ -95,5 +95,4 @@ void fragment() {
 	COLOR.rgb = mandelbrot(UV);
 	float x = max(0.0, 3.0 - TIME) / 3.0;
 	COLOR.rgb = col_a * x + COLOR.rgb * (1.0 - x);
-	
 }"
