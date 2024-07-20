@@ -14,9 +14,9 @@
 
 		<nav id="navBar" class="fadeInStill">
 			<ul>
+				<li><a href="#skills">Skills</a></li>
 				<li><a href="#research">Research</a</li>
 				<li><a href="#projects">Projects</a></li>
-				<li><a href="#skills">Skills</a></li>
 			</ul>
 		</nav>
 
@@ -42,19 +42,39 @@
 			</div>
 
 			<section id="skillList" class="smallContainer fadeIn">
-				<div class="projectBlock">
+				<div class="skillBlock">
+					<h3>Languages</h3>
 					<ul class="projectTools skills">
-						<li><p>Godot</p></li>
 						<li><p>Python</p></li>
 						<li><p>Java</p></li>
-						<li><p>C/C++</p></li>
-						<li><p>HTML/CSS</p></li>
+						<li><p>C</p></li>
+						<li><p>C#</p></li>
+						<li><p>C++</p></li>
+						<li><p>Assembly</p></li>
+						<li><p>Javascript</p></li>
+						<li><p>OpenGL Shading Language</p></li>
+					</ul>
+				</div>
+				<div class="skillBlock">
+					<h3>Frameworks/Tools</h3>
+					<ul class="projectTools skills">
+						<li><p>Godot</p></li>
 						<li><p>OpenGL</p></li>
+						<li><p>Nginx</p></li>
+						<li><p>Gunicorn</p></li>
+						<li><p>Flask</p></li>
+						<li><p>Git</p></li>
+					</ul>
+				</div>
+				<div class="skillBlock">
+					<h3>Design</h3>
+					<ul class="projectTools skills">
 						<li><p>3D Modeling</p></li>
 						<li><p>Pixel Art</p></li>
 						<li><p>Traditional Art</p></li>
-						<li><p>UX Design</p></li>
+						<li><p>UI/UX Design</p></li>
 						<li><p>Sound Design</p></li>
+						<li><p>Data Structures and Algorithms</p></li>
 					</ul>
 				</div>
 			</section>
@@ -134,7 +154,7 @@
 			<section class="smallContainer fadeIn">
 				<div class="projectBlock">
 					<div class="projectNameTag">
-						<h3 lass="projectTitle subTitle"><a href="https://kiwijuice56.itch.io/woof-wizard">Woof Wizard</a></h3>
+						<h3 class="projectTitle subTitle"><a href="https://kiwijuice56.itch.io/woof-wizard">Woof Wizard</a></h3>
 						<p class="projectTag" role="doc-subtitle">#1/300 in LowRezJam 2023</p>
 						<p class="projectDescription">A turn-based RPG packed with action, adventure, and laser-shooting fish on a canvas of only 64x64 pixels. </p>
 					</div>
@@ -211,9 +231,12 @@
 		</div>
 
 		<script>
+			var navVisible = false;
+			var navBar = document.getElementById("navBar");
+			var reveals = document.querySelectorAll(".fadeIn");
+
 			// https://www.nucleiotechnologies.com/fade-in-animation-when-scroll-in-your-website/
 			function reveal() {
-				var reveals = document.querySelectorAll(".fadeIn");
 				for (var i = 0; i < reveals.length; i++) {
 					var windowHeight = window.innerHeight;
 					var elementTop = reveals[i].getBoundingClientRect().top;
@@ -224,13 +247,17 @@
 					}
 				}
 
-				var navBar = document.getElementById("navBar");
-				if (window.pageYOffset > 128) {
+
+				if (window.pageYOffset > 128 && !navVisible) {
 					navBar.classList.add("onScreen");
 					navBar.classList.remove("offScreen");
-				} else {
+					navVisible = true;
+				}
+
+				if (window.pageYOffset <= 128 && navVisible) {
 					navBar.classList.add("offScreen");
 					navBar.classList.remove("onScreen");
+					navVisible = false;
 				}
 			}
 

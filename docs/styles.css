@@ -25,6 +25,7 @@ a {
 #canvasHolder {
 	position: fixed;
 	z-index: -1;
+	height: 100%;
 }
 
 #content {
@@ -89,6 +90,19 @@ a {
 	width: 100%;
 }
 
+.skillBlock {
+	overflow: visible;
+	margin: auto;
+	width: 50%;
+	padding-top: 1.8em;
+	text-align: center;
+}
+
+
+.skillBlock h3 {
+	padding-bottom: 1.0em;
+}
+
 .sectionTitle {
 	font-size: 2em;
 	text-align: center;
@@ -128,11 +142,6 @@ a {
 .projectTools {
 	list-style-type: none;
 	margin-bottom: 1em;
-}
-
-.skills {
-	max-width: 50%;
-	text-align: center;
 }
 
 .projectTools li {
@@ -187,7 +196,7 @@ nav {
 	position: fixed;
 	text-align: right;
 	width: 100%;
-	background-color: #f6e9d4ee;
+	background-color: #f6e9d4de;
 	z-index: 1;
 	filter: drop-shadow(0px 2px 2px #00000011);
 }
@@ -219,8 +228,9 @@ nav li a {
 		width: 100%;
 	}
 
-	.skills {
-		max-width: 100%;
-		text-align: center;
+	.skillBlock {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
