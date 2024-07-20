@@ -12,165 +12,199 @@
 		<div id="canvasHolder"><canvas id="canvas"></canvas></div>
 		<a id="top"></a>
 
+		<nav id="navBar" class="fadeInStill">
+			<ul>
+				<li><a href="#research">Research</a</li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#skills">Skills</a></li>
+			</ul>
+		</nav>
+
 		<div id="content">
-			<div class="container">
+			<section id="headerScreen" class="container">
 				<div id="frontSplash">
 					<h2 class="subTitle">Hi, I'm</h2>
 					<h1 class="nameTitle">Eric Alfaro</h1>
 					<h2 class="subTitle">MIT EECS, game developer, engineer, artist. </h2>
 					<div id="social">
-						<a target="_blank" href="https://github.com/kiwijuice56"><img src="github.png"/></a>
-						<a target="_blank" href="https://kiwijuice56.itch.io/"><img src="itchio.png"/></a>
-						<a target="_blank" href="https://twitter.com/kiwijuice56"><img src="twitter.png"/></a>
-						<a target="_blank" href="https://ko-fi.com/kiwijuice56"><img src="kofi.png"/></a>
-						<a target="_blank" href="https://www.youtube.com/channel/UC3zEYHyy2tWcg71AzlD-A1g"><img src="youtube.png"/></a>
-						<a target="_blank" href="https://www.linkedin.com/in/ericalfaro127/"><img src="linkedin.png"/></a>
+						<a target="_blank" href="https://github.com/kiwijuice56"><img alt="Clickable link to my Github profile" src="./images/icons/github.png"/></a>
+						<a target="_blank" href="https://kiwijuice56.itch.io/"><img alt="Clickable link to my Itch.io profile" src="./images/icons/itchio.png"/></a>
+						<a target="_blank" href="https://twitter.com/kiwijuice56"><img alt="Clickable link to my Twitter/X profile" src="./images/icons/twitter.png"/></a>
+						<a target="_blank" href="https://ko-fi.com/kiwijuice56"><img alt="Clickable link to my Ko-Fi donation profile" src="./images/icons/kofi.png"/></a>
+						<a target="_blank" href="https://www.youtube.com/channel/UC3zEYHyy2tWcg71AzlD-A1g"><img alt="Clickable link to my Youtube channel" src="./images/icons/youtube.png"/></a>
+						<a target="_blank" href="https://www.linkedin.com/in/ericalfaro127/"><img alt="Clickable link to my LinkedIn profile" src="./images/icons/linkedin.png"/></a>
 					</div>
 				</div>
-			</div>
-			<div class="smallContainer">
-				<h1 class="sectionTitle">Skills</h1>
-			</div>
-			<div class="smallContainer fadeIn">
-				<div class="projectBlock">
-						<ul class="projectTools skills">
-							<li><p>Godot</p></li>
-							<li><p>Python</p></li>
-							<li><p>Java</p></li>
-							<li><p>C/C++</p></li>
-							<li><p>HTML/CSS</p></li>
-							<li><p>OpenGL</p></li>
-							<li><p>3D Modeling</p></li>
-							<li><p>Pixel Art</p></li>
-							<li><p>Traditional Art</p></li>
-							<li><p>UX Design</p></li>
-							<li><p>Sound Design</p></li>
-						</ul>
+			</section>
 
-				</div>
-			</div>
 			<div class="smallContainer">
-				<h1 class="sectionTitle">Research</h1>
+				<h1 id="skills" class="sectionTitle">Skills</h1>
 			</div>
-			<div class="smallContainer fadeIn">
+
+			<section id="skillList" class="smallContainer fadeIn">
+				<div class="projectBlock">
+					<ul class="projectTools skills">
+						<li><p>Godot</p></li>
+						<li><p>Python</p></li>
+						<li><p>Java</p></li>
+						<li><p>C/C++</p></li>
+						<li><p>HTML/CSS</p></li>
+						<li><p>OpenGL</p></li>
+						<li><p>3D Modeling</p></li>
+						<li><p>Pixel Art</p></li>
+						<li><p>Traditional Art</p></li>
+						<li><p>UX Design</p></li>
+						<li><p>Sound Design</p></li>
+					</ul>
+				</div>
+			</section>
+
+			<div class="smallContainer">
+				<h1 id="research" class="sectionTitle">Research</h1>
+			</div>
+
+			<section class="smallContainer fadeIn">
 				<div class="projectBlock">
 					<div class="projectNameTag">
-						<a class="projectTitle subTitle" href="https://kiwijuice56.github.io/protein-visualizer/">Protein Visualizer</a>
-						<p class="projectTag">MIT Manolis Kellis Lab, January 2024</p>
+						<h3 class="projectTitle subTitle"><a href="https://kiwijuice56.github.io/protein-visualizer/">Protein Visualizer</a></h3>
+						<p class="projectTag" role="doc-subtitle">MIT Manolis Kellis Lab, January 2024</p>
 						<p class="projectDescription">An interactive visualization of protein structure and behavior through machine learning. Allows users to predict what physical structures in a protein correspond to specific functions. </p>
 					</div>
 					<a href="https://kiwijuice56.github.io/protein-visualizer/">
-						<img class="thumbnail" src="proteinvisualizer.png" alt="Screenshot of the protein visualizer"/>
+						<img class="thumbnail" src="./images/protein_visualizer_screenshot.png" alt="Screenshot of the protein visualizer rendering a detailed and colorful protein structure"/>
 					</a>
 				</div>
-			</div>
-			<div class="smallContainer fadeIn">
+			</section>
+
+			<section class="smallContainer fadeIn">
 				<div class="projectBlock">
 					<div class="projectNameTag">
-						<a class="projectTitle subTitle" href="https://github.com/kiwijuice56/brain-mandelbulb">Brain Mandelbulb</a>
-						<p class="projectTag">MIT Edgerton Center, July 2024</p>
+						<h3 class="projectTitle subTitle"><a href="https://github.com/kiwijuice56/brain-mandelbulb">Brain Mandelbulb</a></h3>
+						<p class="projectTag" role="doc-subtitle">MIT Edgerton Center, June 2024</p>
 						<p class="projectDescription">A 3D fractal visualization that reacts to the electrical brain activity and mental state of the user.</p>
 					</div>
 					<a href="https://github.com/kiwijuice56/brain-mandelbulb">
-						<img class="thumbnail" src="musefractal.webp" alt="Screenshot of the Mandelbulb software"/>
+						<img class="thumbnail" src="./images/brain_mandelbulb_screenshot.webp" alt="Screenshot of the Brain Mandelbulb reacting to EEG data"/>
 					</a>
 				</div>
-			</div>
-			<div class="smallContainer">
-				<h1 class="sectionTitle">Projects</h1>
-			</div>
-			<div class="smallContainer fadeIn">
+			</section>
+
+			<section class="smallContainer fadeIn">
 				<div class="projectBlock">
 					<div class="projectNameTag">
-						<a class="projectTitle subTitle" href="https://kiwijuice56.itch.io/sand-spoon">Sand Spoon</a>
+						<h3 class="projectTitle subTitle"><a href="https://github.com/kiwijuice56/gd-mobile-physiology">GD Mobile Physiology</a></h3>
+						<p class="projectTag" role="doc-subtitle">MIT Edgerton Center, June 2024</p>
+						<p class="projectDescription">A library that analyzes accelerometer and gyroscope data on smartphones to nonintrusively measure heart and respiration rate.</p>
+					</div>
+					<a href="https://github.com/kiwijuice56/gd-mobile-physiology">
+						<img class="thumbnail" src="./images/gd_mobile_physiology_screenshot.webp" alt="Screenshot of physiological signals and a singing bowl app using this library"/>
+					</a>
+				</div>
+			</section>
+
+			<div class="smallContainer">
+				<h1 id="projects" class="sectionTitle">Projects</h1>
+			</div>
+
+			<section class="smallContainer fadeIn">
+				<div class="projectBlock">
+					<div class="projectNameTag">
+						<h3 class="projectTitle subTitle"><a href="https://kiwijuice56.itch.io/sand-spoon">Sand Spoon</a></h3>
 						<p class="projectDescription">A sandbox game that uses AI to infinitely generate new elements from the player's text input.</p>
 					</div>
 					<a href="https://kiwijuice56.itch.io/sand-spoon">
-						<img class="thumbnail" src="sandspoon.gif" alt="GIF gameplay of Sand Spoon"/>
+						<img class="thumbnail" src="./images/sand_spoon_gameplay.gif" alt="A user pasting an image into Sand Spoon and drawing over it with flashy, reactive elements"/>
 					</a>
 				</div>
-			</div>
-			<div class="smallContainer fadeIn">
+			</section>
+
+			<section class="smallContainer fadeIn">
 				<div class="projectBlock">
 					<div class="projectNameTag">
-						<a class="projectTitle subTitle" href="https://kiwijuice56.itch.io/void-fish">Void Fish</a>
-						<p class="projectTag">#20/568 in Fish Fest 2024</p>
+						<h3 class="projectTitle subTitle"><a href="https://kiwijuice56.itch.io/void-fish">Void Fish</a></h3>
+						<p class="projectTag" role="doc-subtitle">#20/568 in Fish Fest 2024</p>
 						<p class="projectDescription">A procedurally generated horror game where you must protect your flock of fish from the deep, desolate ocean. </p>
 					</div>
 					<a href="https://kiwijuice56.itch.io/void-fish">
-						<img class="thumbnail" src="fish.gif" alt="Screenshot of Void Fish gameplay"/>
+						<img class="thumbnail" src="./images/void_fish_gameplay.gif" alt="A small fish (player) frantically swimming away from a predator"/>
 					</a>
 				</div>
-			</div>
-			<div class="smallContainer fadeIn">
+			</section>
+
+			<section class="smallContainer fadeIn">
 				<div class="projectBlock">
 					<div class="projectNameTag">
-						<a class="projectTitle subTitle" href="https://kiwijuice56.itch.io/woof-wizard">Woof Wizard</a>
-						<p class="projectTag">#1/300 in LowRezJam 2023</p>
+						<h3 lass="projectTitle subTitle"><a href="https://kiwijuice56.itch.io/woof-wizard">Woof Wizard</a></h3>
+						<p class="projectTag" role="doc-subtitle">#1/300 in LowRezJam 2023</p>
 						<p class="projectDescription">A turn-based RPG packed with action, adventure, and laser-shooting fish on a canvas of only 64x64 pixels. </p>
 					</div>
 					<a href="https://kiwijuice56.itch.io/woof-wizard">
-						<img class="thumbnail" src="woofwizard.png" alt="Screenshot of Woof Wizard gameplay"/>
+						<img class="thumbnail" src="./images/woof_wizard_gameplay_screenshot.png" alt="Screenshot of Woof Wizard's turn-based RPG combat"/>
 					</a>
 				</div>
-			</div>
-			<div class="smallContainer fadeIn">
+			</section>
+
+			<section class="smallContainer fadeIn">
 				<div class="projectBlock">
 					<div class="projectNameTag">
-						<a class="projectTitle subTitle" href="https://kiwijuice56.itch.io/railway-rider">Railway Rider</a>
-						<p class="projectTag">#5/82 in Godot Wild Jam 59</p>
+						<h3 class="projectTitle subTitle"><a href="https://kiwijuice56.itch.io/railway-rider">Railway Rider</a></h3>
+						<p class="projectTag" role="doc-subtitle">#5/82 in Godot Wild Jam 59</p>
 						<p class="projectDescription">A 3D platformer where you play in the POV of the train from Subway Surfers. </p>
 					</div>
 					<a href="https://kiwijuice56.itch.io/railway-rider">
-						<img class="thumbnail" src="railwayrider.png" alt="Screenshot of Railway Rider gameplay"/>
+						<img class="thumbnail" src="./images/railway_rider_gameplay_screenshot.png" alt="Screenshot of cartoonish, 3D subway flying over a color railway"/>
 					</a>
 				</div>
-			</div>
-			<div class="smallContainer fadeIn">
+			</section>
+
+			<section class="smallContainer fadeIn">
 				<div class="projectBlock">
 					<div class="projectNameTag">
-						<a class="projectTitle subTitle" href="https://kiwijuice56.itch.io/night-shuriken">Night Shuriken</a>
-						<p class="projectTag">#1/39 in Texas Game Jam 2022</p>
+						<h3 class="projectTitle subTitle"><a href="https://kiwijuice56.itch.io/night-shuriken">Night Shuriken</a></h3>
+						<p class="projectTag" role="doc-subtitle">#1/39 in Texas Game Jam 2022</p>
 						<p class="projectDescription">A stylized 3D shooter that utilizes negative space to create an eerie and oppressive atmosphere. </p>
 					</div>
 
 					<a href="https://kiwijuice56.itch.io/night-shuriken">
-						<img class="thumbnail" src="nightshuriken.png" alt="Screenshot of Night Shuriken gameplay"/>
+						<img class="thumbnail" src="./images/night_shuriken_gameplay_screenshot.png" alt="Screenshot of Night Shuriken's monochromatic, creepy atmosphere"/>
 					</a>
 				</div>
-			</div>
-			<div class="smallContainer fadeIn">
+			</section>
+
+			<section class="smallContainer fadeIn">
 				<div class="projectBlock">
 					<div class="projectNameTag">
-						<a class="projectTitle subTitle" href="https://play.google.com/store/apps/details?id=org.godotengine.sandslide&hl=en_US&gl=US&pli=1">Sand Slide</a>
+						<h3 class="projectTitle subTitle"><a href="https://play.google.com/store/apps/details?id=org.godotengine.sandslide&hl=en_US&gl=US&pli=1">Sand Slide</a></h3>
 						<p class="projectDescription">A dynamic and physics-based sandbox game with 100+ elements and a custom element editor. Published on the Google Play Store and reached 1200+ players.</p>
 					</div>
 					<a href="https://play.google.com/store/apps/details?id=org.godotengine.sandslide&hl=en_US&gl=US&pli=1">
-						<img class="thumbnail" src="sandslide.webp" alt="Screenshot of Sand Slide gameplay"/>
+						<img class="thumbnail" src="./images/sand_slide_gameplay_screenshot.webp" alt="Screenshot of explosions and particle reactions in Sand Slide"/>
 					</a>
 				</div>
-			</div>
-			<div class="smallContainer fadeIn">
+			</section>
+
+			<section class="smallContainer fadeIn">
 				<div class="projectBlock">
 					<div class="projectNameTag">
-						<a class="projectTitle subTitle" href="https://kiwijuice56.github.io/fractal-fish/web-fractals.html">Fractal Fish<a>
+						<h3 class="projectTitle subTitle"><a href="https://kiwijuice56.github.io/fractal-fish/web-fractals.html">Fractal Fish<a></h3>
 						<p class="projectDescription">An interactive website for exploring both 2D and 3D fractals with stunning quality and speed.</p>
 					</div>
 					<a href="https://kiwijuice56.github.io/fractal-fish/web-fractals.html">
-						<img class="thumbnail" src="fractalfish.webp" alt="Screenshot of Fractal Fish"/>
+						<img class="thumbnail" src="./images/fractal_fish_screenshot.webp" alt="Screenshot of detailed, silver Menger sponge fractals repeating infinitely"/>
 					</a>
-
 				</div>
-			</div>
-			<div class="smallContainer fadeIn">
+			</section>
+
+			<section class="smallContainer fadeIn">
 				<div class="projectBlock">
 					<div class="projectNameTag">
-						<a class="projectTitle subTitle">And much more...<a>
+						<h3 class="projectTitle subTitle">And much more...</h3>
 						<p id="bottom" class="projectDescription"> I'm constantly working on new projects! Check my GitHub and Itch.io pages for my latest work. <u><a href="#top">Back to top. <a></u></p>
 					</div>
-					<img class="thumbnail" src="otherprojects.webp" alt="Collage of other projects"/>
+					<img class="thumbnail" src="./images/other_projects_collage.webp" alt="A collage of 9 art/game projects, including platformers and online card games"/>
 				</div>
-			</div>
+			</section>
+
 			<footer>
 				<p>© 2024 Eric Alfaro</p>
 			</footer>
@@ -179,8 +213,7 @@
 		<script>
 			// https://www.nucleiotechnologies.com/fade-in-animation-when-scroll-in-your-website/
 			function reveal() {
-			var reveals = document.querySelectorAll(".fadeIn");
-
+				var reveals = document.querySelectorAll(".fadeIn");
 				for (var i = 0; i < reveals.length; i++) {
 					var windowHeight = window.innerHeight;
 					var elementTop = reveals[i].getBoundingClientRect().top;
@@ -190,12 +223,23 @@
 						reveals[i].classList.add("onScreen");
 					}
 				}
+
+				var navBar = document.getElementById("navBar");
+				if (window.pageYOffset > 128) {
+					navBar.classList.add("onScreen");
+					navBar.classList.remove("offScreen");
+				} else {
+					navBar.classList.add("offScreen");
+					navBar.classList.remove("onScreen");
+				}
 			}
 
 			window.addEventListener("scroll", reveal);
 			reveal();
 		</script>
+
         <script src="index.js"></script>
+
         <script>
 			var engine = new Engine({"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":4275488,"index.wasm":13793958},"focusCanvas":false,"gdnativeLibs":[]});
             engine.startGame();
