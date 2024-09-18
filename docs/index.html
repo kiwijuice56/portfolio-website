@@ -7,6 +7,7 @@
 		<meta name="description" content="Eric Alfaro's game development, software engineering, and art portfolio.">
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 		<link rel="stylesheet" href="styles.css">
+		<link rel=canonical href="https://ericalfaro.dev/"/>
     </head>
     <body onload="document.body.style.opacity='1'">
 		<div id="canvasHolder"><canvas id="canvas"></canvas></div>
@@ -14,6 +15,7 @@
 
 		<nav id="navBar" class="fadeInStill">
 			<ul>
+				<li><a href="#aboutMe">About Me</a></li>
 				<li><a href="#skills">Skills</a></li>
 				<li><a href="#research">Research</a</li>
 				<li><a href="#projects">Projects</a></li>
@@ -38,6 +40,19 @@
 			</section>
 
 			<div class="smallContainer">
+				<h1 class="sectionTitle">About Me</h1>
+			</div>
+
+			<section id="aboutMe" class="smallContainer fadeIn">
+				<div class="projectBlock">
+					<div class="projectNameTag">
+						<p class="projectDescription"> I'm a Mexican-American software developer and artist from Houston, Texas. I love computer graphics, game development, and computational biology. My hobbies include cooking, competitive programming, tinkering with electronics, learning, and playing RPGs. I'm currently studying computer science and engineering (6-3) at MIT.</p>
+					</div>
+					<img class="thumbnail" src="images/eric_hackmit2024.webp" alt="My team and I competing at HackMIT 2024"/>
+				</div>
+			</section>
+
+			<div class="smallContainer">
 				<h1 id="skills" class="sectionTitle">Skills</h1>
 			</div>
 
@@ -52,7 +67,7 @@
 						<li><p>C++</p></li>
 						<li><p>Assembly</p></li>
 						<li><p>Javascript</p></li>
-						<li><p>OpenGL Shading Language</p></li>
+						<li><p>GLSL</p></li>
 					</ul>
 				</div>
 				<div class="skillBlock">
@@ -74,7 +89,8 @@
 						<li><p>Traditional Art</p></li>
 						<li><p>UI/UX Design</p></li>
 						<li><p>Sound Design</p></li>
-						<li><p>Data Structures and Algorithms</p></li>
+						<li><p>Music</p></li>
+						<li><p>Software Design</p></li>
 					</ul>
 				</div>
 			</section>
@@ -88,7 +104,7 @@
 					<div class="projectNameTag">
 						<h3 class="projectTitle subTitle"><a href="https://kiwijuice56.github.io/protein-visualizer/">Protein Visualizer</a></h3>
 						<p class="projectTag" role="doc-subtitle">MIT Manolis Kellis Lab, January 2024</p>
-						<p class="projectDescription">An interactive visualization of protein structure and behavior through machine learning. Allows users to predict what physical structures in a protein correspond to specific functions. </p>
+						<p class="projectDescription">An interactive visualization of protein structure and behavior through AI machine learning. Allows users to predict what physical structures in a protein correspond to specific functions. </p>
 					</div>
 					<a href="https://kiwijuice56.github.io/protein-visualizer/">
 						<img class="thumbnail" src="./images/protein_visualizer_screenshot.png" alt="Screenshot of the protein visualizer rendering a detailed and colorful protein structure"/>
@@ -129,8 +145,21 @@
 			<section class="smallContainer fadeIn">
 				<div class="projectBlock">
 					<div class="projectNameTag">
+						<h3 class="projectTitle subTitle"><a href="https://kiwijuice56.itch.io/fractiwi">Fractiwi</a></h3>
+						<p class="projectTag" role="doc-subtitle">#4/258 in LowRezJam 2024</p>
+						<p class="projectDescription">A vast exploration and turn-based JRPG on a canvas of only 64x64 pixels. Created entirely from scratch in two weeks.</p>
+					</div>
+					<a href="https://kiwijuice56.itch.io/fractiwi">
+						<img class="thumbnail" src="./images/fractiwi_gameplay.gif" alt="A short segment of a player running around a map and running into an encounter."/>
+					</a>
+				</div>
+			</section>
+
+			<section class="smallContainer fadeIn">
+				<div class="projectBlock">
+					<div class="projectNameTag">
 						<h3 class="projectTitle subTitle"><a href="https://kiwijuice56.itch.io/sand-spoon">Sand Spoon</a></h3>
-						<p class="projectDescription">A sandbox game that uses AI to infinitely generate new elements from the player's text input.</p>
+						<p class="projectDescription">A sandbox game that uses LLM AI to infinitely generate new elements from the player's text input.</p>
 					</div>
 					<a href="https://kiwijuice56.itch.io/sand-spoon">
 						<img class="thumbnail" src="./images/sand_spoon_gameplay.gif" alt="A user pasting an image into Sand Spoon and drawing over it with flashy, reactive elements"/>
@@ -147,19 +176,6 @@
 					</div>
 					<a href="https://kiwijuice56.itch.io/void-fish">
 						<img class="thumbnail" src="./images/void_fish_gameplay.gif" alt="A small fish (player) frantically swimming away from a predator"/>
-					</a>
-				</div>
-			</section>
-
-			<section class="smallContainer fadeIn">
-				<div class="projectBlock">
-					<div class="projectNameTag">
-						<h3 class="projectTitle subTitle"><a href="https://kiwijuice56.itch.io/woof-wizard">Woof Wizard</a></h3>
-						<p class="projectTag" role="doc-subtitle">#1/300 in LowRezJam 2023</p>
-						<p class="projectDescription">A turn-based RPG packed with action, adventure, and laser-shooting fish on a canvas of only 64x64 pixels. </p>
-					</div>
-					<a href="https://kiwijuice56.itch.io/woof-wizard">
-						<img class="thumbnail" src="./images/woof_wizard_gameplay_screenshot.png" alt="Screenshot of Woof Wizard's turn-based RPG combat"/>
 					</a>
 				</div>
 			</section>

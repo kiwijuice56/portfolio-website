@@ -122,8 +122,8 @@ a {
 
 .thumbnail {
 	object-fit: cover;
-	width: 19em;
-	height: 13em;
+	width: 21em;
+	height: 16.6em;
 	border-radius: 0.5em;
 	filter: drop-shadow(4px 4px 2px #00000055);
 	outline: 20px solid transparent;
