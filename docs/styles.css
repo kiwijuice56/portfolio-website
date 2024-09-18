@@ -213,6 +213,10 @@ nav li a {
 }
 
 @media(max-width: 920px) {
+	nav {
+		display: none;
+	}
+
 	.projectNameTag {
 		width: 100%;
 	}
