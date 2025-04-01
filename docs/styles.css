@@ -90,6 +90,25 @@ a {
 	width: 100%;
 }
 
+.imageUnderlay {
+	padding-top: 2.0em;
+	position: relative;
+  	text-align: center;
+  	color: white;
+}
+
+.imageUnderlay img {
+	border-radius: 0.5em;
+	width: 100%;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }
+
 .skillBlock {
 	overflow: visible;
 	margin: auto;
