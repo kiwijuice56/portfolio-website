@@ -62,6 +62,11 @@ a {
 	padding-right: 2.5em;
 }
 
+.finalBlock {
+	padding-left: 2.5em;
+	padding-right: 2.5em;
+}
+
 #social a {
 	display: inline-block;
 	color: #5F514F;
@@ -107,7 +112,7 @@ a {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-  }
+}
 
 .skillBlock {
 	overflow: visible;
@@ -255,5 +260,20 @@ nav li a {
 		width: 100%;
 		padding-left: 0;
 		padding-right: 0;
+	}
+
+	.finalBlock {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.imageUnderlay img {
+		border-radius: 0em;
+	}
+
+	.centered {
+		padding-left: 2.5em;
+		padding-right: 2.5em;
+		width: 80%;
 	}
 }
